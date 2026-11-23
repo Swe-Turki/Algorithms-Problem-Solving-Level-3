@@ -1,0 +1,42 @@
+# Compiled executables (Windows)
+*.exe
+*.out
+*.app
+
+# Compiled binaries without extension (e.g. ./Problem01)
+# Ignore everything without an extension, then re-allow folders
+*
+!*.*
+!*/
+!.gitignore
+
+# Object files & libraries
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# Debug symbols / build artifacts
+*.dSYM/
+*.pdb
+*.ilk
+*.idb
+*.gch
+*.pch
+
+# Build folders
+build/
+bin/
+obj/
+Debug/
+Release/
+x64/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+.DS_Store

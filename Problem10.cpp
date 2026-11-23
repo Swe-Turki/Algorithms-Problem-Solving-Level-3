@@ -1,0 +1,45 @@
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+int RandomNumber(int From, int To) {
+  int randNum = rand() % (To - From + 1) + From;
+  return randNum;
+}
+
+void FillMatrixWithRandomNumbers(int arr[3][3], short Rows, short Cols) {
+  for (short i = 0; i < Rows; i++) {
+    for (short j = 0; j < Cols; j++) {
+      arr[i][j] = RandomNumber(1, 10);
+    }
+  }
+}
+
+int sumMatrix(int arr[3][3], short Rows, short Cols) {
+  int number = 0;
+  for (short i = 0; i < Rows; i++) {
+    for (short j = 0; j < Cols; j++) {
+      number += arr[i][j];
+    }
+  }
+  return number; 
+}
+
+void PrintMatrix(int arr[3][3], short Rows, short Cols) {
+  for (short i = 0; i < Rows; i++) {
+    for (short j = 0; j < Cols; j++) {
+      printf(" %0*d ", 2, arr[i][j]);
+    }
+    cout << "\n";
+  }
+}
+
+int main() {
+  // Seeds the random number generator in C++, called only once
+  srand((unsigned)time(NULL));
+  int Matrix1[3][3];
+  FillMatrixWithRandomNumbers(Matrix1, 3, 3);
+  cout << "\nMatrix1:\n";
+  PrintMatrix(Matrix1, 3, 3);
+  cout << "Sum of Matrix is : " << sumMatrix(Matrix1, 3, 3) << endl;
+}
