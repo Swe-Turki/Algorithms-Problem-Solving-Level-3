@@ -147,7 +147,7 @@ int main() {
   string AccountNumber = ReadClientAccountNumber();
   if (FindClientByAccountNumber(AccountNumber, Client, vClients)) {
     PrintClientCard(Client);
-    cout << "\nAre you sure you want delete this client? y/n? \n";
+    cout << "\nAre you sure you want Updated this client? y/n? \n";
     cin >> UserAnswer;
     if (UpdateClientRecord(AccountNumber, vClients, UserAnswer)) {
       cout << "\nClient Updated Successfully.\n";
